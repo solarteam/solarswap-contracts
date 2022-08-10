@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.6.12;
 
-import '../interfaces/IARC20.sol';
+import "../interfaces/IARC20.sol";
 import "openzeppelin6/utils/Address.sol";
 import "openzeppelin6/math/SafeMath.sol";
 
@@ -14,7 +14,10 @@ library SafeARC20 {
         address to,
         uint256 value
     ) internal {
-        _callOptionalReturn(token, abi.encodeWithSelector(token.transfer.selector, to, value));
+        _callOptionalReturn(
+            token,
+            abi.encodeWithSelector(token.transfer.selector, to, value)
+        );
     }
 
     function safeTransferFrom(
@@ -23,7 +26,10 @@ library SafeARC20 {
         address to,
         uint256 value
     ) internal {
-        _callOptionalReturn(token, abi.encodeWithSelector(token.transferFrom.selector, from, to, value));
+        _callOptionalReturn(
+            token,
+            abi.encodeWithSelector(token.transferFrom.selector, from, to, value)
+        );
     }
 
     /**
@@ -44,9 +50,12 @@ library SafeARC20 {
         // solhint-disable-next-line max-line-length
         require(
             (value == 0) || (token.allowance(address(this), spender) == 0),
-            'SafeARC20: approve from non-zero to non-zero allowance'
+            "SafeARC20: approve from non-zero to non-zero allowance"
         );
-        _callOptionalReturn(token, abi.encodeWithSelector(token.approve.selector, spender, value));
+        _callOptionalReturn(
+            token,
+            abi.encodeWithSelector(token.approve.selector, spender, value)
+        );
     }
 
     function safeIncreaseAllowance(
@@ -54,8 +63,17 @@ library SafeARC20 {
         address spender,
         uint256 value
     ) internal {
-        uint256 newAllowance = token.allowance(address(this), spender).add(value);
-        _callOptionalReturn(token, abi.encodeWithSelector(token.approve.selector, spender, newAllowance));
+        uint256 newAllowance = token.allowance(address(this), spender).add(
+            value
+        );
+        _callOptionalReturn(
+            token,
+            abi.encodeWithSelector(
+                token.approve.selector,
+                spender,
+                newAllowance
+            )
+        );
     }
 
     function safeDecreaseAllowance(
@@ -65,9 +83,16 @@ library SafeARC20 {
     ) internal {
         uint256 newAllowance = token.allowance(address(this), spender).sub(
             value,
-            'SafeARC20: decreased allowance below zero'
+            "SafeARC20: decreased allowance below zero"
         );
-        _callOptionalReturn(token, abi.encodeWithSelector(token.approve.selector, spender, newAllowance));
+        _callOptionalReturn(
+            token,
+            abi.encodeWithSelector(
+                token.approve.selector,
+                spender,
+                newAllowance
+            )
+        );
     }
 
     /**
@@ -81,11 +106,17 @@ library SafeARC20 {
         // we're implementing it ourselves. We use {Address.functionCall} to perform this call, which verifies that
         // the target address contains contract code and also asserts for success in the low-level call.
 
-        bytes memory returndata = address(token).functionCall(data, 'SafeARC20: low-level call failed');
+        bytes memory returndata = address(token).functionCall(
+            data,
+            "SafeARC20: low-level call failed"
+        );
         if (returndata.length > 0) {
             // Return data is optional
             // solhint-disable-next-line max-line-length
-            require(abi.decode(returndata, (bool)), 'SafeARC20: ARC20 operation did not succeed');
+            require(
+                abi.decode(returndata, (bool)),
+                "SafeARC20: ARC20 operation did not succeed"
+            );
         }
     }
 }

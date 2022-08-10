@@ -10,7 +10,11 @@ contract Treasury is Ownable {
         return address(this).balance;
     }
 
-    function claim(address payable _to, uint256 _amount) public payable onlyOwner {
+    function claim(address payable _to, uint256 _amount)
+        public
+        payable
+        onlyOwner
+    {
         require(getBalance() >= _amount, "Insufficient Astra to claim");
         _to.transfer(_amount);
     }

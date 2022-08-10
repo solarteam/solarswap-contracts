@@ -1,47 +1,47 @@
 export default {
   Treasury: {
     mainnet: "",
-    testnet: "0xf98f25ca6e0F00F58a02c0a072f9721a8eFe700e",
+    testnet: "0x78f7C53fe30B2dA1e66db9802D2a002c39d15DC4",
   },
   WASA: {
     mainnet: "",
-    testnet: "0x0A8Afec5eD55c1A66752A5D41aa9839C6f114246",
+    testnet: "0xcb23021518a9230D43897f2D0fF8342677fCA58A",
   },
   USDT: {
     mainnet: "",
-    testnet: "0x97965bd35d2a283623282EdF9f2b0CB95A4F9bC9",
+    testnet: "0x437AB5ce1ba224d13b6e2D78b10f1493705EaB8C",
   },
   Multicall2: {
     mainnet: "",
-    testnet: "0x15294271174ACdf29f25C3d921b09B6C12D37504",
+    testnet: "0x4B1bfF5cAf516A4611c47a10802c6442CAa203bA",
   },
   SolarswapFactory: {
     mainnet: "",
-    testnet: "0xa7E43419221c4e22559A5B88EB453EA45bB92674",
+    testnet: "0x1d46dfdAcA25eDE809B8AFB5075d2CAc69265667",
   },
   INIT_CODE_PAIR_HASH: {
     mainnet: "",
-    testnet: "b997d135f0b24a4a7249367dde22352c109030971889585cd2f6312a628af7c2",
+    testnet: "b50ecbbc0748c14b5445b459c75dc9fea42b4b5543f81251ba0ea03dede5a90e",
   },
   SolarswapRouter01: {
     mainnet: "",
-    testnet: "0xc0a477C8885B34933101daf80189CbFBA0cba436",
+    testnet: "0xD5681e6A626afdEd803115Bc6223e9735F3dD627",
   },
   SolarswapRouter: {
     mainnet: "",
-    testnet: "0x0f269a943879D66f74d92AC0FDD1ed7678eb6cFF",
+    testnet: "0x7656c0Bc75B8e0ed89bD1d92Ab6f41225603E834",
   },
   SyrupBar: {
     mainnet: "",
-    testnet: "0xA3bcA3e28D1FC0acF34AEebA2AE7A5c04B871611",
+    testnet: "0xaCA6866001024fA910DE5907113F85bC757a1a6E",
   },
   MasterChef: {
     mainnet: "",
-    testnet: "0x4AC1C7824f818084A025911A55f24276DF32d461",
+    testnet: "0x192D15E56bd43372ed54D166AD0E2733DB95e9C1",
   },
   SousChef: {
     mainnet: "",
-    testnet: "0x70f8821fc85eADF210E0eF9f6273c169A88bd82d",
+    testnet: "0x1653728624dCF20A7304d449317DE269AD3A29d0",
   },
   USDT_ASA: {
     mainnet: "",
